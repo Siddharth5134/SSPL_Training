@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add() {
+            var a = document.getElementsByName("text1")[0].value;
+            var b = document.getElementsByName("text2")[0].value;
+            if (isNaN(a) || isNaN(b)) {
+                alert("Please enter valid numbers.")
+            }
+            else if (!a || !b) {
+                alert("Please enter number.")
+            }
+            else {
+                var ans = parseInt(a) + parseInt(b);
+                ans = ans.toFixed(4);
+                document.getElementById("result").innerText = ans
+            }
+        }
+        function sub() {
+            var a = document.getElementsByName("text1")[0].value;
+            var b = document.getElementsByName("text2")[0].value;
+            if (isNaN(a) || isNaN(b)) {
+                alert("Please enter valid numbers.")
+            }
+            else if (!a || !b) {
+                alert("Please enter number.")
+            }
+            else {
+                var ans = parseInt(a) - parseInt(b);
+                ans = ans.toFixed(4);
+                document.getElementById("result").innerText = ans
+            }
+        }
+        function mul() {
+            var a = document.getElementsByName("text1")[0].value;
+            var b = document.getElementsByName("text2")[0].value;
+            if (isNaN(a) || isNaN(b)) {
+                alert("Please enter valid numbers.")
+            }
+            else if (!a || !b) {
+                alert("Please enter number.")
+            }
+            else {
+                var ans = parseInt(a) * parseInt(b);
+                ans = ans.toFixed(4);
+                document.getElementById("result").innerText = ans
+            }
+        }
+        function div() {
+            var a = document.getElementsByName("text1")[0].value;
+            var b = document.getElementsByName("text2")[0].value;
+            if (isNaN(a) || isNaN(b)) {
+                alert("Please enter valid numbers.")
+            }
+            else if (!a || !b) {
+                alert("Please enter number.")
+            }
+            else {
+                if (b == 0) {
+                    alert("Can't divide by 0");
+                }
+                else {
+                    var ans = parseInt(a) / parseInt(b);
+                    ans = ans.toFixed(4);
+                    document.getElementById("result").innerText = ans
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form id="myform">
+        Enter number a: <input type="text" name="text1" placeholder="Enter number a" />
+        <br />
+        Enter number b: <input type="text" name="text2" placeholder="Enter number b" />
+        <br />
+        <p id="result"></p>
+        <br />
+        <input type="button" value="add" onclick="add()">
+        <input type="button" value="sub" onclick="sub()">
+        <input type="button" value="mul" onclick="mul()">
+        <input type="button" value="div" onclick="div()">
+    </form>
+</body>
+
+</html>

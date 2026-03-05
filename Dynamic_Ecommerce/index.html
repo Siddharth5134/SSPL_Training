@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First E-commerce Shop</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .product-card {
+            width: 220px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .product-title {
+            margin: 10px 0 5px;
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: green;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 12px;
+            background: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .product-sales {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Best Products</h1>
+
+    <div class="product-container" id="productContainer"></div>
+
+
+    <script>
+
+        var products = [
+            {
+                name: "Elegant Watch",
+                price: 45,
+                image: "https://media.istockphoto.com/id/1068843992/photo/luxury-watch-isolated-on-white-background-with-clipping-path-gold-watch-women-watch-female.jpg?s=1024x1024&w=is&k=20&c=aA8z7_58eJ_lnLCQNDcKQigvDPZ5PJFlYjGi9ZVzD74="
+            },
+            {
+                name: "Premium Watch",
+                price: 60,
+                image: "https://media.istockphoto.com/id/1068843992/photo/luxury-watch-isolated-on-white-background-with-clipping-path-gold-watch-women-watch-female.jpg?s=1024x1024&w=is&k=20&c=aA8z7_58eJ_lnLCQNDcKQigvDPZ5PJFlYjGi9ZVzD74="
+            },
+            {
+                name: "Classic Watch",
+                price: 35,
+                image: "https://media.istockphoto.com/id/1068843992/photo/luxury-watch-isolated-on-white-background-with-clipping-path-gold-watch-women-watch-female.jpg?s=1024x1024&w=is&k=20&c=aA8z7_58eJ_lnLCQNDcKQigvDPZ5PJFlYjGi9ZVzD74="
+            },
+            {
+                name: "Golden Watch",
+                price: 80,
+                image: "https://media.istockphoto.com/id/1068843992/photo/luxury-watch-isolated-on-white-background-with-clipping-path-gold-watch-women-watch-female.jpg?s=1024x1024&w=is&k=20&c=aA8z7_58eJ_lnLCQNDcKQigvDPZ5PJFlYjGi9ZVzD74="
+            },
+            {
+                name: "Smart Watch",
+                price: 120,
+                image: "https://media.istockphoto.com/id/1068843992/photo/luxury-watch-isolated-on-white-background-with-clipping-path-gold-watch-women-watch-female.jpg?s=1024x1024&w=is&k=20&c=aA8z7_58eJ_lnLCQNDcKQigvDPZ5PJFlYjGi9ZVzD74="
+            },
+            {
+                name: "Luxury Watch",
+                price: 150,
+                image: "https://media.istockphoto.com/id/1068843992/photo/luxury-watch-isolated-on-white-background-with-clipping-path-gold-watch-women-watch-female.jpg?s=1024x1024&w=is&k=20&c=aA8z7_58eJ_lnLCQNDcKQigvDPZ5PJFlYjGi9ZVzD74="
+            }
+        ];
+
+
+        var container = document.getElementById("productContainer");
+
+        for (var i = 0; i < products.length; i++) {
+
+            container.innerHTML +=
+                `
+        <div class="product-card">
+
+            <marquee direction="right" class="product-sales">
+                🚨⚠️SALE IS LIVE NOW!⚠️🚨
+            </marquee>
+
+            <img src="${products[i].image}" class="product-image">
+
+            <div class="product-info">
+
+                <h3 class="product-title">${products[i].name}</h3>
+
+                <p class="product-price">$${products[i].price}</p>
+
+                <a class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+        `;
+        }
+
+    </script>
+
+
+</body>
+
+</html>

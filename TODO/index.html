@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TODO</title>
+</head>
+
+<body>
+
+    <h1>TO-DO</h1>
+
+    <input type="text" id="t1">
+    <a href="view.html">
+        <button onclick="abc()">CLICK HERE</button>
+    </a>
+
+    <script>
+        function abc() {
+            var x = document.getElementById("t1").value;
+            var data = localStorage.getItem("tasks");
+            var arr = [];
+            arr = JSON.parse(data);
+            arr.push(x);
+            localStorage.setItem("tasks", JSON.stringify(arr));
+
+            // window.location.href = "view.html";
+        }
+    </script>
+
+</body>
+
+</html>
